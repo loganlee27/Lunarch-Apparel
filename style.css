@@ -1,0 +1,433 @@
+/*I wanted to place the form and map beside each other.*/
+div image {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  img {
+    width: 100%;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;  
+    align-items: flex-start;      
+    padding: 20px;
+  }
+  
+  iframe {
+    max-width: 100%; 
+    border:none
+  }
+
+  .map-form-wrapper {
+    display: flex;
+    justify-content: center;   /* Moves both items to the center of the page */
+    align-items: flex-start;   /* Aligns their tops */
+    gap: 10px;                 /* Space between map and form */
+    flex-wrap: wrap;           /* Allows wrapping on small screens */
+    padding: 20px;
+  }
+  
+  .google-map, .google-form {
+    border: none;
+    max-width: 100%;
+  }
+
+  .map-text {
+    text-align: center;
+  }
+
+  .map-caption {
+  margin-top: 10px;
+  font-size: small;
+  text-align: center; /* Center the sentence under the map */
+}
+
+  
+  /*I decided to add a carousel element to my homepage to add an extra element and to showcase the lastest products. This is the styling for the carousel. */
+  .carousel {  
+    position: relative;
+    max-width: 300px;
+    margin: auto;
+    overflow:hidden;
+    border-radius: 15px; 
+  } 
+  
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /*100% per image x 3 */
+  } 
+  
+  .carousel-images img {
+    width: 100%;
+    flex: 1 0 100%;
+    object-fit: cover;
+  }
+  
+  /*Styling for the buttons.*/
+  button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color:#fff2b300 ;
+    border: none;
+    color: rgb(247, 244, 244);
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  /*Spacing for the buttons.*/
+    button.prev {
+    left: -10px;
+  }
+  
+  button.next {
+    right: -10px;
+  }
+
+/*New code for carousel */
+/* Overall Layout */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.left-text, .right-carousel {
+  flex: 1 1 45%;
+  max-width: 45%;
+}
+
+/* Hover Box Styling */
+.hover-box {
+  margin-top: 25px;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.box-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.box-image.open {
+  display: none;
+}
+
+.hover-box:hover .box-image.closed {
+  display: none;
+}
+
+.hover-box:hover .box-image.open {
+  display: block;
+}
+
+.product-images {
+  display: flex;
+  gap: 10px;
+  margin-top: 180px;
+  justify-content: center;
+}
+
+.product-images img {
+  width: 50px;
+  height: auto;
+}
+
+  /* Contact form centering */
+ .centered-form {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  min-height: 100vh;       /* Full height of screen */
+  padding: 20px; 
+} 
+
+.centered-form form {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px; 
+}
+
+  /* Navbar styling */
+nav {
+  background-color: #8d765b;
+  overflow: hidden; /* This prevents the content from going outside the navbar.*/
+  font-family: 'Lato', serif;
+  display: flex;
+  align-items: center; /* Centers logo and nav links vertically */
+  justify-content: space-between; /* Spreads out each items. */
+}
+
+/*Styling for Logo*/
+  nav .logo {
+  height: 50px; 
+  width: 50px;
+  padding: 3px;
+  border-radius: 7px;
+}
+
+nav a {
+  float: left; /* Align links to the left */
+  display: block; /* Make the link a block element (so the full height is clickable) */
+  color: #220000; 
+  text-align: center; /* Allows text to be in the center of the webpage.*/
+  padding: 14px 20px; /* Add padding around the links */
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 5px; /* Adds space between links */
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #bdac96; 
+  color: #8d765b ; /* Text color when it is hovered over */
+  padding: 14px 20px; 
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a.active {
+  background-color: #bdac96; /* Highlight the active link */
+  color: #220000;
+}
+
+header {
+  background-color: #8d765b;
+  padding: 14px 20px; 
+}
+
+/* Making my nav bar responsive to a phone screen */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start; 
+    padding: 5px;
+  }
+
+  nav a {
+    font-size: 0.7rem;
+    padding: 10px; 
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  nav a:hover {
+    padding: 10px; 
+    font-size: 0.7rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #bdac96;
+    color: #220000;
+  }
+
+  nav .logo {
+    height: 33px; 
+    width: 33px;
+    padding: 2px;
+    align-self: flex-start;
+  }
+}
+
+/* Product Gallery */
+.product-gallery {
+  display: flex;
+  justify-content: space-around;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.product {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Set a fixed width for each product */
+  text-align: center;
+}
+
+.product img {
+  width: 100%; /* Ensure the image fits the container */
+  height: auto;
+  border-radius: 5px;
+}
+
+.description {
+  font-size: 1em;
+  color: #555;
+  margin-top: 10px;
+  padding: 10px;
+  font-style: italic;
+}
+
+/* The responsive design for smaller screens.*/
+ @media screen and (max-width: 768px) {
+  .product-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: center;
+  } 
+
+  .product {
+    width: 80%; /* This makes products take up more space on small screens.*/
+    margin-bottom: 20px;
+  }
+}
+
+/* Stlying text elements and background */
+main {
+  padding: 30px;
+}
+
+body {
+  color: #ead8a6;
+}
+
+h1 {
+  font-family: 'Lora', serif ;
+  font-size: 250%;
+  font-stretch: extra-condensed;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  color: #a7a773;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-size: 200%;
+  font-stretch: extra-condensed;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  color: #a7a773;
+  text-align: center;
+}
+
+p {
+  font-family: 'Lora', serif;
+  font-size: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  line-height: 1.6;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Making text responsive to a phone screen */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+/*About Us page info of the left and form on the right */
+.text-form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap; /* Makes it responsive on smaller screens */
+  padding: 20px;
+}
+
+.text-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.form-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+iframe {
+  max-width: 100%;
+  border: none;
+}
+
+/*Hover box element */
+.hover-box {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.box-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.box-image.open {
+  opacity: 0;
+  z-index: 1;
+}
+
+.hover-box:hover .box-image.open {
+  opacity: 1;
+}
+
+.hover-box:hover .box-image.closed {
+  opacity: 0;
+}
+
+.product-images {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.hover-box:hover .product-images {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-images img {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
